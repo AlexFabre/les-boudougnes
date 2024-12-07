@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease;
+}
+
+.overlay-container {
+    position: absolute; /* Position it over the slideshow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10; /* Ensure it appears above the slideshow */
+}
+
+.logo {
+    width: 25rem;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 2rem;
+}
+
+.link-container {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80rem;
+}
+
+.button {
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: none;
+    /* background: none; */
+    cursor: pointer;
+    outline: none;
+    font-size: 32px;
+    font-family: fantasy;
+}
+
+.button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: #ffd000;
+    transition: width 0.5s ease;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.button:hover::after {
+    width: 100%;
+}
+
+.bottom-container {
+    position: absolute;
+    width: 100%;
+    height: 35rem;
+    bottom: 0rem;
+    transform: translateY(20%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(255, 255, 255, 1));
+}
+
+.bottom-paragraph {
+    position: relative;
+    width: 80rem;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 32px;
+    font-family: fantasy;
+}
